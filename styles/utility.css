@@ -1,0 +1,32 @@
+.container {
+  --max-width: 320px;
+  width: min(var(--max-width), 100% - (2.25rem * 2));
+  margin-inline: auto;
+  border: 1px solid red; /* Comentar essa linha */
+}
+
+@media (width >= 80em) {
+  .container {
+    --max-width: 1098px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap\.5 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 0.5rem;
+}
