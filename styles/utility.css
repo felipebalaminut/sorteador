@@ -5,11 +5,6 @@
   border: 1px solid red; /* Comentar essa linha */
 }
 
-@media (width >= 80em) {
-  .container {
-    --max-width: 1098px;
-  }
-}
 
 .flex {
   display: flex;
@@ -29,4 +24,10 @@
 
 .gap-1 {
   gap: 0.5rem;
+}
+
+@media (width >= 80em) {
+  .container {
+    --max-width: 1098px;
+  }
 }
