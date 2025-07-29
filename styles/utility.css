@@ -2,9 +2,8 @@
   --max-width: 320px;
   width: min(var(--max-width), 100% - (2.25rem * 2));
   margin-inline: auto;
-  border: 1px solid red; /* Comentar essa linha */
+  border: 1px solid red;
 }
-
 
 .flex {
   display: flex;

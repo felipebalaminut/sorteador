@@ -1,13 +1,12 @@
 .btn-primary {
-  margin: 1rem; /* Remover essa linha */
   display: flex;
   align-items: center;
   justify-content: center;
 
   background-color: var(--background-tertiary);
-  width: 375px; /* Alterar para 100% */
-  padding: 1rem;
   border-radius: 0.5rem;
+  padding: 1rem;
+  width: 100%;
 
   /* font */
   color: var(--content-primary);
@@ -15,7 +14,6 @@
   font-weight: 700;
 
   position: relative;
-
   &::before {
     position: absolute;
     content: "";
@@ -29,36 +27,39 @@
     opacity: 0;
   }
 
+  & .arrow-icon {
+    transition: transform 0.3s ease-out;
+  }
+
   &:hover {
     background-color: var(--background-secondary);
 
     &::before {
-      /* opacity: 1; */
-
-      animation: opacityTiming 3s, runAround 3s infinite backwards;
+      animation: borderFade 0.3s forwards, gradientSweep 2s;
     }
 
-    & img[src*="arrow"] {
-      animation-name: arrowMove;
-      animation-duration: 3s;
+    & .arrow-icon {
+      transform: translateX(0.5rem);
     }
 
-    & img[src*="retry"] {
-      animation-name: retryRotate;
-      animation-duration: 2s;
+    & .retry-icon {
+      animation: retrySpin 1s ease-in-out forwards;
     }
   }
 }
 
 /* ------- KEYFRAMES ------- */
 
-@keyframes opacityTiming {
-  100% {
+@keyframes borderFade {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }
 
-@keyframes runAround {
+@keyframes gradientSweep {
   0% {
     background-position: -200% 0;
   }
@@ -67,17 +68,7 @@
   }
 }
 
-@keyframes arrowMove {
-  50% {
-    transform: translateX(1rem);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes retryRotate {
+@keyframes retrySpin {
   0% {
     transform: rotate(0deg);
   }
