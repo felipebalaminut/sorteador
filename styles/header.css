@@ -1,5 +1,5 @@
-header {
-  margin-top: 2.5rem;
+#logo {
+  margin-block: 2.5rem 5.75rem;
 
   display: flex;
   align-items: center;
@@ -14,8 +14,8 @@ header {
 }
 
 @media (width >= 80em) {
-  header {
-    margin-top: 5rem;
+  #logo {
+    margin-top: 4.875rem;
     justify-content: initial;
   }
 }

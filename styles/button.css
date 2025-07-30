@@ -27,10 +27,6 @@
     opacity: 0;
   }
 
-  & .arrow-icon {
-    transition: transform 0.3s ease-out;
-  }
-
   &:hover {
     background-color: var(--background-secondary);
 
@@ -46,6 +42,10 @@
       animation: retrySpin 1s ease-in-out forwards;
     }
   }
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease-out;
 }
 
 /* ------- KEYFRAMES ------- */

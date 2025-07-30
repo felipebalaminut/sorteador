@@ -1,0 +1,38 @@
+#app {
+  display: grid;
+  row-gap: 2.5rem;
+  grid-template-areas:
+    "header header header"
+    "form form form"
+    "footer footer footer";
+
+  /* Remover esse border quando estiver pronto */
+  & > * {
+    border: 1px solid white;
+  }
+
+  & header {
+    grid-area: header;
+  }
+
+  & form {
+    grid-area: form;
+  }
+
+  & footer {
+    grid-area: footer;
+  }
+}
+
+@media (width >= 80em) {
+  #app {
+    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "header form"
+      "footer form";
+
+    row-gap: 2.365rem;
+    column-gap: 6.75rem;
+  }
+}
