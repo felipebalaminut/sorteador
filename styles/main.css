@@ -6,6 +6,8 @@
     "form form form"
     "footer footer footer";
 
+  margin-bottom: 3rem;
+
   /* Remover esse border quando estiver pronto */
   & > * {
     border: 1px solid white;
@@ -56,9 +58,26 @@
   color: var(--content-brand);
 }
 
-.item .faq-awnser {
+.item .faq-answer {
   font-size: var(--fs-sm);
   color: var(--content-secondary);
+}
+
+.classifier {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.description h3 {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.description p {
+  color: var(--content-tertiary);
+  font-size: var(--fs-md);
 }
 
 @media (width >= 80em) {
@@ -71,6 +90,8 @@
 
     row-gap: 2.365rem;
     column-gap: 6.75rem;
+
+    margin-bottom: 0;
   }
 
   .titles .page-title {
@@ -82,7 +103,11 @@
     font-size: var(--fs-lg);
   }
 
-  .item .faq-awnser {
+  .item .faq-answer {
     font-size: var(--fs-md);
+  }
+
+  .description p {
+    font-size: var(--fs-lg);
   }
 }
