@@ -6,7 +6,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Numbers - Sorteador de Números</title>
-
     <link rel="stylesheet" href="styles/index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Sora:wght@100..800&display=swap"
@@ -16,7 +15,7 @@
   <body>
     <header id="logo" class="container">
       <img src="assets/icons/logo.svg" alt="" />
-      <span class="logo">Numbers</span>
+      <span class="logo-name">NUMBERS</span>
     </header>
 
     <main id="app" class="container">
@@ -34,53 +33,15 @@
           </p>
         </div>
 
-        <div class="input-wrapper">
-          <div class="number-wrapper">
-            <div class="number-inner">
-              <label for="number-quantity">NÚMEROS</label>
-              <input
-                type="number"
-                name="number-quantity"
-                id="number-quantity"
-                min="1"
-                required
-              />
-            </div>
+        <fieldset>Em Desenvolvimento...</fieldset>
 
-            <div class="number-inner">
-              <label for="min-number">DE</label>
-              <input
-                type="number"
-                name="min-number"
-                id="min-number"
-                min="0"
-                max="100"
-                required
-              />
-            </div>
-
-            <div class="number-inner">
-              <label for="max-number">A</label>
-              <input
-                type="number"
-                name="max-number"
-                id="max-number"
-                min="1"
-                max="999"
-                required
-              />
-            </div>
-          </div>
-
-          <div class="checkbox-wrapper">
-            <input type="checkbox" name="checkbox" id="repeat" />
-            <label for="repeat">Não repetir número</label>
-          </div>
-        </div>
-
-        <button class="btn-primary gap-1">
+        <button class="btn-primary">
           SORTEAR
-          <img src="assets/icons/arrow-right.svg" alt="arrow right" />
+          <img
+            class="arrow-icon"
+            src="assets/icons/arrow-right.svg"
+            alt="arrow right"
+          />
         </button>
       </form>
 
@@ -112,5 +73,7 @@
         </div>
       </footer>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>

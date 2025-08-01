@@ -1,12 +1,10 @@
 .btn-primary {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   background-color: var(--background-tertiary);
   border-radius: 0.5rem;
   padding: 1rem;
   width: 100%;
+  display: flex;
+  gap: 0.5rem;
 
   /* font */
   color: var(--content-primary);

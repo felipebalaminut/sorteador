@@ -1,29 +1,34 @@
 #app {
   display: grid;
   row-gap: 2.5rem;
-  grid-template-areas:
-    "header header header"
-    "form form form"
-    "footer footer footer";
+  grid-template-rows: auto 1fr auto;
 
   margin-bottom: 3rem;
 
-  /* Remover esse border quando estiver pronto */
-  & > * {
+  /* Bordas do grid */
+  /* & > * {
     border: 1px solid white;
-  }
+  } */
+}
 
-  & header {
-    grid-area: header;
-  }
+form.classifier {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 
-  & form {
-    grid-area: form;
-  }
+  margin-block: auto;
+}
 
-  & footer {
-    grid-area: footer;
-  }
+.titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.titles .page-title {
+  text-transform: uppercase;
+  letter-spacing: -1.6px;
+  font: 800 var(--fs-3xl) / 1.3 var(--ff-sora);
 }
 
 .titles .page-subtitle {
@@ -36,39 +41,6 @@
   font-weight: 700;
 }
 
-.titles .page-title {
-  text-transform: uppercase;
-  letter-spacing: -1.6px;
-  font: 800 var(--fs-3xl) / 1.3 var(--ff-sora);
-}
-
-.faq {
-  display: grid;
-  gap: 2rem;
-}
-
-& .question {
-  display: flex;
-  align-items: start;
-  gap: 0.5rem;
-}
-
-.item .faq-question {
-  font-size: var(--fs-md);
-  color: var(--content-brand);
-}
-
-.item .faq-answer {
-  font-size: var(--fs-sm);
-  color: var(--content-secondary);
-}
-
-.classifier {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
 .description h3 {
   font-size: var(--fs-xl);
   font-weight: 700;
@@ -78,6 +50,28 @@
 .description p {
   color: var(--content-tertiary);
   font-size: var(--fs-md);
+  font-weight: 400;
+}
+
+.faq {
+  display: grid;
+  gap: 2rem;
+}
+
+.question {
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.faq-question {
+  font-size: var(--fs-md);
+  color: var(--content-brand);
+}
+
+.faq-answer {
+  font-size: var(--fs-sm);
+  color: var(--content-secondary);
 }
 
 @media (width >= 80em) {
@@ -87,11 +81,22 @@
     grid-template-areas:
       "header form"
       "footer form";
-
     row-gap: 2.365rem;
     column-gap: 6.75rem;
 
     margin-bottom: 0;
+  }
+
+  #app > header {
+    grid-area: header;
+  }
+
+  #app > form {
+    grid-area: form;
+  }
+
+  #app > footer {
+    grid-area: footer;
   }
 
   .titles .page-title {
@@ -99,15 +104,20 @@
     font-size: var(--fs-4xl);
   }
 
-  .item .faq-question {
-    font-size: var(--fs-lg);
-  }
-
-  .item .faq-answer {
-    font-size: var(--fs-md);
-  }
-
   .description p {
     font-size: var(--fs-lg);
+  }
+
+  .titles .page-title {
+    letter-spacing: -2.88px;
+    font-size: var(--fs-4xl);
+  }
+
+  .faq-question {
+    font-size: var(--fs-lg);
+  }
+
+  .faq-answer {
+    font-size: var(--fs-md);
   }
 }
