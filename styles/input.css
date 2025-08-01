@@ -1,3 +1,67 @@
-fieldset {
+form .numbers {
   border: none;
+
+  display: flex;
+  gap: 0.75rem;
+}
+
+.number-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.number-wrapper label {
+  color: var(--content-secondary);
+  font-weight: 700;
+}
+
+.number-wrapper:has(:hover) label,
+.number-wrapper:has(:focus) label {
+  color: var(--content-brand);
+}
+
+input[type="number"] {
+  border: none;
+  outline: none;
+
+  background-color: var(--background-secondary);
+  border-radius: 0.5rem;
+  width: 86px;
+  height: 56px;
+  padding: 4px 8px;
+  cursor: pointer;
+
+  caret-color: var(--content-primary); /* cursor de texto */
+
+  font: 700 var(--fs-2xl) / 1.5 var(--ff-sora);
+  color: var(--content-primary);
+  text-align: center;
+
+  /* Reset Chrome, Safari, Edge, Opera */
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--background-tertiary);
+  }
+}
+
+.gradient-border:has(:hover) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    inset: -1.6px;
+    background: var(--gradient-border);
+    border-radius: 0.5rem;
+    z-index: -1;
+  }
 }

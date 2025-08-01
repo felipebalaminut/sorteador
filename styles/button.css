@@ -25,7 +25,9 @@
     opacity: 0;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: none;
     background-color: var(--background-secondary);
 
     &::before {

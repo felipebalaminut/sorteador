@@ -33,7 +33,33 @@
           </p>
         </div>
 
-        <fieldset>Em Desenvolvimento...</fieldset>
+        <fieldset class="numbers">
+          <div class="number-wrapper">
+            <label for="numbers">NÚMEROS</label>
+            <div class="gradient-border">
+              <input
+                class=""
+                type="number"
+                min="1"
+                id="numbers"
+                placeholder="2"
+              />
+            </div>
+          </div>
+
+          <div class="number-wrapper">
+            <label for="minNumber">DE </label>
+            <div class="gradient-border">
+              <input type="number" min="0" id="minNumber" placeholder="0" />
+            </div>
+          </div>
+          <div class="number-wrapper">
+            <label for="maxNumber">A</label>
+            <div class="gradient-border">
+              <input type="number" min="0" id="maxNumber" placeholder="100" />
+            </div>
+          </div>
+        </fieldset>
 
         <button class="btn-primary">
           SORTEAR
