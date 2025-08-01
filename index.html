@@ -24,7 +24,7 @@
         <h1 class="page-title">Sorteador<br />de Números</h1>
       </header>
 
-      <form class="classifier">
+      <section class="classifier">
         <div class="description">
           <h3>Quero sortear:</h3>
           <p>
@@ -33,33 +33,42 @@
           </p>
         </div>
 
-        <fieldset class="numbers">
-          <div class="number-wrapper">
-            <label for="numbers">NÚMEROS</label>
-            <div class="gradient-border">
-              <input
-                class=""
-                type="number"
-                min="1"
-                id="numbers"
-                placeholder="2"
-              />
+        <form>
+          <fieldset class="numbers">
+            <div class="number-wrapper">
+              <label for="numbers">NÚMEROS</label>
+              <div class="gradient-border">
+                <input class="" type="number" min="1" id="numbers" />
+              </div>
             </div>
-          </div>
 
-          <div class="number-wrapper">
-            <label for="minNumber">DE </label>
-            <div class="gradient-border">
-              <input type="number" min="0" id="minNumber" placeholder="0" />
+            <div class="number-wrapper">
+              <label for="minNumber">DE </label>
+              <div class="gradient-border">
+                <input type="number" min="0" id="minNumber" />
+              </div>
             </div>
-          </div>
-          <div class="number-wrapper">
-            <label for="maxNumber">A</label>
-            <div class="gradient-border">
-              <input type="number" min="0" id="maxNumber" placeholder="100" />
+            <div class="number-wrapper">
+              <label for="maxNumber">A</label>
+              <div class="gradient-border">
+                <input type="number" min="0" id="maxNumber" />
+              </div>
             </div>
-          </div>
-        </fieldset>
+          </fieldset>
+
+          <fieldset>
+            <div class="switch-checkbox-wrapper">
+              <label for="repeat"></label>
+              <input
+                class="visually-hidden"
+                type="checkbox"
+                name="repeat"
+                id="repeat"
+              />
+              <span class="switch">Não repetir números</span>
+            </div>
+          </fieldset>
+        </form>
 
         <button class="btn-primary">
           SORTEAR
@@ -69,7 +78,7 @@
             alt="arrow right"
           />
         </button>
-      </form>
+      </section>
 
       <footer class="faq">
         <div class="question">

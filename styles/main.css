@@ -11,7 +11,7 @@
   } */
 }
 
-form.classifier {
+section.classifier {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
@@ -79,8 +79,8 @@ form.classifier {
     grid-template-columns: 1.05fr 0.95fr;
     grid-template-rows: auto auto;
     grid-template-areas:
-      "header form"
-      "footer form";
+      "header section"
+      "footer section";
     row-gap: 2.365rem;
     column-gap: 6.75rem;
 
@@ -91,8 +91,8 @@ form.classifier {
     grid-area: header;
   }
 
-  #app > form {
-    grid-area: form;
+  #app > section {
+    grid-area: section;
   }
 
   #app > footer {

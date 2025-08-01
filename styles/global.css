@@ -94,6 +94,10 @@ button {
   justify-content: center;
 }
 
+fieldset {
+  border: none;
+}
+
 @media (width >= 80em) {
   body {
     background-image: url(/assets/images/bg-desktop-shape.png);

@@ -1,6 +1,10 @@
-form .numbers {
-  border: none;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
+section .numbers {
   display: flex;
   gap: 0.75rem;
 }
@@ -52,7 +56,8 @@ input[type="number"] {
   }
 }
 
-.gradient-border:has(:hover) {
+.gradient-border:has(:hover),
+.gradient-border:has(:focus) {
   position: relative;
 
   &::before {
@@ -63,5 +68,55 @@ input[type="number"] {
     background: var(--gradient-border);
     border-radius: 0.5rem;
     z-index: -1;
+  }
+}
+
+.switch-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.switch-checkbox-wrapper label {
+  width: 30px;
+  height: 1.25rem;
+  padding: 3px;
+  border-radius: 1rem;
+  background: var(--content-tertiary);
+
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: var(--content-primary);
+    border-radius: 50%;
+
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+  }
+}
+
+.switch-checkbox-wrapper:has(:checked) label {
+  background: var(--gradient-background);
+
+  &::after {
+    transform: translateX(10px) translateY(-50%);
+  }
+}
+
+.switch-checkbox-wrapper:has(:focus) label {
+  outline: 2px solid var(--content-brand);
+}
+
+.switch-checkbox-wrapper .switch {
+  font: 400 var(--fs-sm) / 1.5 var(--ff-sora);
+}
+
+@media (width >= 80em) {
+  .switch-checkbox-wrapper .switch {
+    font-size: var(--fs-md);
   }
 }
