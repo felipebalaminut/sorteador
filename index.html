@@ -33,30 +33,54 @@
           </p>
         </div>
 
-        <form>
+        <form id="form-numbers">
           <fieldset class="numbers">
             <div class="number-wrapper">
               <label for="numbers">NÚMEROS</label>
               <div class="gradient-border">
-                <input class="" type="number" min="1" id="numbers" />
+                <input
+                  class="number-quantity"
+                  type="number"
+                  min="1"
+                  id="numbers"
+                  required
+                  placeholder="1-9"
+                />
               </div>
             </div>
-
             <div class="number-wrapper">
               <label for="minNumber">DE </label>
               <div class="gradient-border">
-                <input type="number" min="0" id="minNumber" />
+                <input
+                  class="minNumber"
+                  type="number"
+                  min="0"
+                  max="99"
+                  id="minNumber"
+                  required
+                />
               </div>
             </div>
             <div class="number-wrapper">
               <label for="maxNumber">A</label>
               <div class="gradient-border">
-                <input type="number" min="0" id="maxNumber" />
+                <input
+                  class="maxNumber"
+                  type="number"
+                  min="0"
+                  id="maxNumber"
+                  required
+                />
               </div>
             </div>
           </fieldset>
 
-          <fieldset>
+          <div class="hidden errorMessage">
+            <img src="assets/icons/warning.svg" alt="aviso" />
+            <span>Quantidade maior que o intervalo selecionado.</span>
+          </div>
+
+          <fieldset class="checkbox">
             <div class="switch-checkbox-wrapper">
               <label for="repeat"></label>
               <input
@@ -70,7 +94,7 @@
           </fieldset>
         </form>
 
-        <button class="btn-primary">
+        <button form="form-numbers" class="btn-primary">
           SORTEAR
           <img
             class="arrow-icon"

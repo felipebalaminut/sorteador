@@ -17,6 +17,10 @@
   border: 0;
 }
 
+div.hidden {
+  display: none;
+}
+
 @media (width >= 80em) {
   .container {
     --max-width: 1098px;
