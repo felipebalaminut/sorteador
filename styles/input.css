@@ -76,18 +76,18 @@ input[type="number"] {
   }
 }
 
-.errorMessage {
+.error-message {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.errorMessage img {
+.error-message img {
   width: 0.875rem;
   height: 0.875rem;
 }
 
-.errorMessage span {
+.error-message span {
   font: 400 var(--fs-sm) / 1.3 var(--ff-roboto);
   color: #de6835ff;
 }

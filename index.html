@@ -43,39 +43,41 @@
                   type="number"
                   min="1"
                   id="numbers"
-                  required
                   placeholder="1-9"
+                  required
                 />
               </div>
             </div>
+
             <div class="number-wrapper">
-              <label for="minNumber">DE </label>
+              <label for="min-number">DE </label>
               <div class="gradient-border">
                 <input
-                  class="minNumber"
+                  class="min-number"
                   type="number"
                   min="0"
                   max="99"
-                  id="minNumber"
+                  id="min-number"
                   required
                 />
               </div>
             </div>
+
             <div class="number-wrapper">
-              <label for="maxNumber">A</label>
+              <label for="max-number">A</label>
               <div class="gradient-border">
                 <input
-                  class="maxNumber"
+                  class="max-number"
                   type="number"
                   min="0"
-                  id="maxNumber"
+                  id="max-number"
                   required
                 />
               </div>
             </div>
           </fieldset>
 
-          <div class="hidden errorMessage">
+          <div class="hidden error-message">
             <img src="assets/icons/warning.svg" alt="aviso" />
             <span>Quantidade maior que o intervalo selecionado.</span>
           </div>
@@ -88,6 +90,7 @@
                 type="checkbox"
                 name="repeat"
                 id="repeat"
+                aria-label="Não repetir números"
               />
               <span class="switch">Não repetir números</span>
             </div>
@@ -96,10 +99,31 @@
 
         <button form="form-numbers" class="btn-primary">
           SORTEAR
+          <img src="assets/icons/arrow-right.svg" alt="arrow right" />
+        </button>
+      </section>
+
+      <section class="draw hidden">
+        <header>
+          <h2>Resultado do sorteio</h2>
+          <p>1º resultado</p>
+        </header>
+
+        <div class="draw-results">
+          <div class="draw-result-box">
+            <span class="draw-result-number">02</span>
+          </div>
+          <div class="draw-result-box">
+            <span class="draw-result-number">62</span>
+          </div>
+        </div>
+
+        <button class="btn-primary" id="draw-again-btn">
+          SORTEAR NOVAMENTE
           <img
-            class="arrow-icon"
-            src="assets/icons/arrow-right.svg"
-            alt="arrow right"
+            class="retry-icon"
+            src="assets/icons/retry.svg"
+            alt="retry icon"
           />
         </button>
       </section>

@@ -31,25 +31,12 @@
     background-color: var(--background-secondary);
 
     &::before {
-      animation: borderFade 0.3s forwards, gradientSweep 2s;
-    }
-
-    & .arrow-icon {
-      transform: translateX(0.5rem);
-    }
-
-    & .retry-icon {
-      animation: retrySpin 1s ease-in-out forwards;
+      animation: borderFade 1s forwards, gradientSweep 3s backwards;
     }
   }
 }
 
-.arrow-icon {
-  transition: transform 0.3s ease-out;
-}
-
 /* ------- KEYFRAMES ------- */
-
 @keyframes borderFade {
   from {
     opacity: 0;
