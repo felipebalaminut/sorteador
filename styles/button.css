@@ -37,6 +37,20 @@
 }
 
 /* ------- KEYFRAMES ------- */
+.move-x {
+  animation: move 0.5s;
+}
+
+@keyframes move {
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
 @keyframes borderFade {
   from {
     opacity: 0;
@@ -55,10 +69,11 @@
   }
 }
 
+.icon-spin {
+  animation: retrySpin 0.5s;
+}
+
 @keyframes retrySpin {
-  0% {
-    transform: rotate(0deg);
-  }
   100% {
     transform: rotate(360deg);
   }

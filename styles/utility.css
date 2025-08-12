@@ -21,6 +21,7 @@
   display: none !important;
 }
 
+
 @media (width >= 80em) {
   .container {
     --max-width: 1098px;

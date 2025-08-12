@@ -43,7 +43,6 @@
                   type="number"
                   min="1"
                   id="numbers"
-                  placeholder="1-9"
                   required
                 />
               </div>
@@ -103,28 +102,18 @@
         </button>
       </section>
 
-      <section class="draw hidden">
+      <section class="results-section hidden">
         <header>
           <h2>Resultado do sorteio</h2>
           <p>1º resultado</p>
         </header>
 
-        <div class="draw-results">
-          <div class="draw-result-box">
-            <span class="draw-result-number">02</span>
-          </div>
-          <div class="draw-result-box">
-            <span class="draw-result-number">62</span>
-          </div>
+        <div class="numbers-container">
         </div>
 
-        <button class="btn-primary" id="draw-again-btn">
+        <button id="retry-button" class="btn-primary">
           SORTEAR NOVAMENTE
-          <img
-            class="retry-icon"
-            src="assets/icons/retry.svg"
-            alt="retry icon"
-          />
+          <img src="assets/icons/retry.svg" alt="retry icon" />
         </button>
       </section>
 
