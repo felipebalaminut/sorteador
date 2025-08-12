@@ -27,6 +27,20 @@ section.classifier {
   gap: 0.75rem;
 }
 
+.back {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.back a {
+  font-size: var(--ff-md);
+  text-transform: uppercase;
+  color: white;
+
+  font-weight: 900;
+}
+
 .titles .page-title {
   text-transform: uppercase;
   letter-spacing: -1.6px;
