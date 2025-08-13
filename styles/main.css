@@ -121,6 +121,7 @@ section.classifier {
   gap: 0.5rem;
 
   flex-wrap: wrap;
+  min-height: 6.375rem;
 }
 
 .number-card {
