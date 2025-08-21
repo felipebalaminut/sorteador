@@ -1,5 +1,5 @@
 #logo {
-  margin-block: 2.5rem 5.75rem;
+  margin-block: 2.5rem 4rem;
 
   display: flex;
   align-items: center;
@@ -15,7 +15,7 @@
 
 @media (width >= 80em) {
   #logo {
-    margin-top: 4.875rem;
+    margin-top: 4rem;
     justify-content: initial;
   }
 }
