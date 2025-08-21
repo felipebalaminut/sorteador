@@ -10,7 +10,9 @@ const resultSection = document.querySelector(".results-section");
 const resultHeader = resultSection.querySelector("header");
 const numbersContainer = document.querySelector(".numbers-container");
 const retryButton = document.getElementById("retry-button");
+const retryIcon = retryButton.querySelector("img");
 const arrowButton = document.querySelector('button[form="form-numbers"]');
+const arrowIcon = arrowButton.querySelector("img");
 
 form.addEventListener("submit", handleDraw);
 
@@ -143,7 +145,6 @@ numberQuantity.addEventListener("input", (event) => {
 
 // === Animation functions ===
 arrowButton.addEventListener("click", () => {
-  const arrowIcon = arrowButton.querySelector("img");
   arrowIcon.classList.add("move-x");
   setTimeout(() => {
     arrowIcon.classList.remove("move-x");
@@ -151,10 +152,12 @@ arrowButton.addEventListener("click", () => {
 });
 
 retryButton.addEventListener("click", (event) => {
-  const retryIcon = retryButton.querySelector("img");
+  retryButton.disabled = true;
   retryIcon.classList.add("icon-spin");
+
   setTimeout(() => {
     retryIcon.classList.remove("icon-spin");
+    retryButton.disabled = false;
   }, 500);
 
   handleDraw(event);
